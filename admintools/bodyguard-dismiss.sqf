@@ -1,0 +1,2 @@
+
+bg_dismiss = true;
