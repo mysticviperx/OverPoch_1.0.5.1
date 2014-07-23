@@ -12,6 +12,7 @@ _admins = ["17081926"/*Mystic*/,
 "108778118"/*Apophys*/,
 "129674950"/*Deadhead*/,
 "65903622"/*Ghosty*/,
+"258916422"/*GrimPanda*/,
 "20641734"/*Hunyt*/];
 
 //PLAYERS WITH SOME PERMISSION
