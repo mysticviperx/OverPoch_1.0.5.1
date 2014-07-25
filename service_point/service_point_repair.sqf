@@ -10,7 +10,9 @@ _servicePoint = _args select 0;
 _costs = _args select 1;
 _repairTime = _args select 2;
 
-if !([_costs] call AC_fnc_checkAndRemoveRequirements) exitWith {};
+//Updated Buy Function
+//if !([_costs] call AC_fnc_checkAndRemoveRequirements) exitWith {};
+if !([[[_costs select 0, _costs select 1]],0] call epoch_returnChange) exitWith {};
 
 _type = typeOf _vehicle;
 _name = getText(configFile >> "cfgVehicles" >> _type >> "displayName");
