@@ -8,8 +8,9 @@ if ((getPlayerUID player) in _admins) then {
 	_bg_usetime = 0;
 	
 } else {
-
+//Updated Buy Functions
 	if !([_cost] call AC_fnc_checkAndRemoveRequirements) then {
+//	if !([[[_cost select 0, _costs select 1]],0] call epoch_returnChange) then {
 		cutText ["\nYou do not have enough gold in your inventory.", "PLAIN DOWN"];
 		_exitNow=true;
 	} else {
