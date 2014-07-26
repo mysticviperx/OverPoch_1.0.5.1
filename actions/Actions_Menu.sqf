@@ -70,7 +70,7 @@ ActionsMenu =
 [
 	["",true],
 	["Self Bloodbag", [], "", -5, [["expression", format[_EXECscript1,"player_selfbloodbag.sqf"]]], "1", "1"],
-	["Flip Vehicle", [], "", -5, [["expression", format[_EXECscript1,"flipvehicle.sqf"]]], "1", "1"],
+	["Flip Vehicle", [], "", -5, [["expression", format[_EXECscript1,"flip_vehicle.sqf"]]], "1", "1"],
 	["Suicide", [], "", -5, [["expression", format[_EXECscript1,"suicide.sqf"]]], "1", "1"],	
 		["", [], "", -5, [["expression", ""]], "1", "0"],
 		["Exit", [20], "", -5, [["expression", ""]], "1", "1"]		
