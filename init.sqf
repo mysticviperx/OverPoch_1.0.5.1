@@ -67,6 +67,7 @@ call compile preprocessFileLineNumbers "admintools\compiles.sqf";				//Compile r
 //call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";				//Compile regular functions
 progressLoadingScreen 0.5;
 call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
+call compile preprocessFileLineNumbers "admintools\AdminList.sqf"; // Epoch admin Tools variables/UIDs
 progressLoadingScreen 1.0;
 
 "filmic" setToneMappingParams [0.153, 0.357, 0.231, 0.1573, 0.011, 3.750, 6, 4]; setToneMapping "Filmic";
@@ -122,6 +123,9 @@ if (isServer) then {
 	_serverMonitor = 	[] execVM "\z\addons\dayz_code\system\server_monitor.sqf";
 };
 
+// Epoch Admin Tools
+[] execVM "admintools\Activate.sqf";
+
 if (!isDedicated) then {
 	//Refuel 
 	[] execVM "Scripts\kh_actions.sqf";
@@ -152,11 +156,9 @@ if (!isDedicated) then {
 	
 	//anti Hack
 	// Epoch Admin Tools
-	_adminListHandle = [] execVM "admintools\AdminList.sqf";
-	waitUntil{scriptDone _adminListHandle};
-	if ( !((getPlayerUID player) in AdminList) && !((getPlayerUID player) in ModList) && !((getPlayerUID player) in tempList)) then 
+	if ( !((getPlayerUID player) in AdminList) && !((getPlayerUID player) in ModList)) then 
 	{
-		[] execVM "\z\addons\dayz_code\system\antihack.sqf";
+		[] execVM "admintools\antihack\antihack.sqf"; // Epoch Antihack with bypass
 	};
 
 	//safezones
@@ -185,7 +187,5 @@ execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
 // Heli Evac
 //_nil = [] execVM "helievac\functions.sqf";
-// Epoch Admin Tools
-[] execVM "admintools\Activate.sqf";
 // Nox's Custom Action Menu
 [] execVM "actions\activate.sqf";
