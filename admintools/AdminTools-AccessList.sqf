@@ -1,7 +1,7 @@
 
 //PLAYERS WITH ALL PERMISSIONS
 _admins = [
-"17081926"/*Mystic*/,
+"76561197999003538"/*Mystic*/,
 "3042438" /*Massaster*/,
 "39688134"/*Karhan*/,
 "65234758"/*TheBumbiHunter(2)*/,
