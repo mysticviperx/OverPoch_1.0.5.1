@@ -124,7 +124,7 @@ if (isServer) then {
 };
 
 // Epoch Admin Tools
-[] execVM "admintools\Activate.sqf";
+	[] execVM "admintools\Activate.sqf"; // Epoch admin tools
 
 if (!isDedicated) then {
 	//Refuel 

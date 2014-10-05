@@ -1,13 +1,10 @@
 // Epoch Admin Tools
 //Replace 111111111 with your ID. 
+
 SuperAdminList = [
 "76561197999003538"/*Mystic*/,
+"12345678901234567"/*NoBody*/
 ];
-
-
-
-
-
 
 AdminList = [
 "17081926", // Mystic
