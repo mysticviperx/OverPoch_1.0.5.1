@@ -1,0 +1,110 @@
+Admin Tools Edits
+
+C:\Program Files (x86)\Steam\SteamApps\common\Arma 2 Operation Arrowhead\MPMissions\DayZ_Overpoch_1.sauerland\admintools
+
+Activate.sqf
+
+original
+				[]execVM "admintools\KeyBindings\FunctionKeys.sqf";
+changed
+//				[]execVM "admintools\KeyBindings\FunctionKeys.sqf";
+
+AdminList.sqf
+
+	Updated to use old adminlist
+	
+AdminToolsMain.sqf
+
+	Updated Tool Text for:
+		Admin Mode
+		Spectate Player
+		
+		Mod Mode
+		Spectate Player
+		
+		Teleport
+		Teleport To Me
+		Teleport To Player
+		
+	Added Teleport to Way Points to Menu
+	
+C:\Program Files (x86)\Steam\SteamApps\common\Arma 2 Operation Arrowhead\MPMissions\DayZ_Overpoch_1.sauerland\admintools\KeyBindings
+
+NumberKeys.sqf
+
+	Updated Key Codes to number pad keys
+	
+C:\Program Files (x86)\Steam\SteamApps\common\Arma 2 Operation Arrowhead\MPMissions\DayZ_Overpoch_1.sauerland\admintools\tools
+
+spectate.sqf
+
+old
+
+				F6_Key = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 64) then {spectate = false;};"];	
+
+				titleText ["F6 to return","PLAIN DOWN"];titleFadeOut 4;
+
+updated
+
+				F6_Key = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 73) then {spectate = false;};"];	
+
+				titleText ["NUMPAD 9 to return","PLAIN DOWN"];titleFadeOut 4;
+
+C:\Program Files (x86)\Steam\SteamApps\common\Arma 2 Operation Arrowhead\MPMissions\DayZ_Overpoch_1.sauerland\admintools\tools\AdminMode
+
+adminmode.sqf
+
+	old
+
+	2 cutText ["***Press F4 to toggle AdminMode options***","PLAIN",0.75];
+	F4_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 62) then {call optionMenu;};"];
+
+
+	update
+	
+	2 cutText ["***Press NUMPAD-3 to toggle AdminMode options***","PLAIN",0.75];
+	F4_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 81) then {call optionMenu;};"];
+
+ESPenhanced.sqf
+
+	old
+	
+	F5_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 63) then {call F5Menu;};"];
+
+	updated
+	
+	F5_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 77) then {call F5Menu;};"];
+
+modMode.sqf
+
+	old
+	
+	titleText ["***Press F4 to toggle Mod-Mode options***","PLAIN"];titleFadeOut 5;
+	F4_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 62) then {call optionMenu;};"];
+
+	update
+	
+	titleText ["***Press NUMPAD-3 to toggle Mod-Mode options***","PLAIN"];titleFadeOut 5;
+	F4_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 81) then {call optionMenu;};"];
+
+Added files and folders
+
+Folder
+	Vehicles
+	
+Files
+	ac_functions.sqf
+	AdminTools-AccessList.sqf
+	All BodyGuard Files
+	compiles.sqf
+	custom_messages.sqf
+	custom_monitor.sqf
+	dayz_spaceInterrupt
+	doPorterTele.sqf
+	fn_selfActionsAddon Files
+	gather_zparts.sqf
+	loadout.sqf
+	playerspawn.sqf
+	varibles.sqf
+	
+	
