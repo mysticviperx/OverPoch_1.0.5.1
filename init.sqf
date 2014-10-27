@@ -27,7 +27,7 @@ enableSentences false;
 spawnShoremode = 0; // Default = 1 (on shore)
 spawnArea= 2000; // Default = 1500
 // 
-MaxVehicleLimit = 750; // Default = 50
+MaxVehicleLimit = 500; // Default = 50
 MaxDynamicDebris = 500; // Default = 100
 dayz_MapArea = 22000; // Default = 10000
 
